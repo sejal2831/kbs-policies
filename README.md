@@ -1,47 +1,35 @@
 # KBS Policies Repository
 
-This repository contains OPA (Open Policy Agent) policies and reference values for the Key Broker Service (KBS).
+## Current Status: Waiting for SCONE Policy Examples
+
+This repository is prepared to integrate SCONE-style policies with KBS.
 
 ## Structure
 ```
 policies/
-├── opa/                      # Rego policy files
-│   └── my_app_policy.rego   # Custom application policy
-├── reference-values/         # Expected measurements
-│   └── my_app_values.json   # Reference values for my app
-└── README.md                # This file
+├── scone-policies/          # SCONE YAML policies (from professor)
+│   └── my-app-session.yaml  # Example SCONE session
+├── kbs-policies/            # KBS-compatible Rego policies
+│   └── sample_policy.rego   # Temporary test policy
+├── reference-values/        # Expected measurements
+│   └── reference-values.yaml
+└── README.md
 ```
 
-## Policy: my_app_policy
+## Workflow
 
-**Purpose:** Validate confidential workloads before granting access to secrets
+1. **Receive SCONE policies** from professor
+2. **Place in scone-policies/** directory
+3. **Convert to KBS format** (or integrate SCONE CAS)
+4. **Test with KBS**
 
-**Checks performed:**
-1. ✅ Container image is in approved list
-2. ✅ Debug mode is disabled
-3. ✅ Launch digest matches expected value
-4. ✅ Security Version Number (SVN) is acceptable
-5. ✅ Platform version meets minimum requirements
+## Next Steps
 
-**Approved Images:**
-- `my-confidential-app:v1.0`
-- `my-confidential-app:latest`
-- `docker.io/my-app:v1.0`
-
-## Reference Values
-
-Reference values define the expected measurements and configurations:
-
-- `my_app_launch_digest`: Expected launch measurements
-- `my_app_svn`: Accepted security version numbers (1, 2)
-- `platform_major`: Required platform major version (1)
-- `platform_minor`: Minimum platform minor version (0)
-- `approved_images`: List of allowed container images
-
-## Usage
-
-KBS fetches policies from this repository and evaluates workload attestations against these rules.
+- [ ] Receive actual SCONE policy examples from professor
+- [ ] Determine integration approach (convert vs SCONE CAS)
+- [ ] Implement policy validation
+- [ ] Test with sample application
 
 **Author:** Sejal Manoj Utekar  
-**Project:** KBS Operator - TU Dresden  
-**Date:** March 2, 2026
+**Date:** March 2, 2026  
+**Status:** Awaiting SCONE policy examples
