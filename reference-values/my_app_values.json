@@ -1,0 +1,14 @@
+{
+    "my_app_launch_digest": [
+        "0000000000000000000000000000000000000000000000000000000000000000",
+        "1111111111111111111111111111111111111111111111111111111111111111"
+    ],
+    "my_app_svn": [1, 2],
+    "platform_major": 1,
+    "platform_minor": 0,
+    "approved_images": [
+        "my-confidential-app:v1.0",
+        "my-confidential-app:latest",
+        "docker.io/my-app:v1.0"
+    ]
+}
