@@ -3,7 +3,7 @@ package policy
 import rego.v1
 
 # Temporary policy for testing
-# Will be replaced when we get actual SCONE policies from professor
+
 
 default executables := 33
 default hardware := 97
