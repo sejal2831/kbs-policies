@@ -1,4 +1,4 @@
-name: kbs-policies
+name: kbs-policies-v2
 version: "0.3.10"
 security:
   attestation:
