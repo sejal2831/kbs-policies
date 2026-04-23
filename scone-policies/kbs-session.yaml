@@ -1,0 +1,7 @@
+name: kbs-policies
+version: "0.3.10"
+security:
+  attestation:
+    mode: none
+services:
+  - name: kbs
