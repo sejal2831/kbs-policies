@@ -1,0 +1,9 @@
+{
+  "session": "version: 0.3.10\nname: kbs-policies-v4\npredecessor: null\nservices:\n- name: kbs\n  command: null\n  pwd: null\n  persistency: None\naccess_policy:\n  read:\n  - ANY\n  update:\n  - signer: |\n      -----BEGIN PUBLIC KEY-----\n      MCowBQYDK2VwAyEA1Qa0GnCN+HmHEOk0+323sXvVX+NPw4kgUFnpOlRXSH4=\n      -----END PUBLIC KEY-----\nsecurity:\n  attestation:\n    mode: none\ncreator: null\n",
+  "signatures": [
+    {
+      "signer": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEA1Qa0GnCN+HmHEOk0+323sXvVX+NPw4kgUFnpOlRXSH4=\n-----END PUBLIC KEY-----\n",
+      "signature": "HvL4yF2TbtwYvL0N3JqqOBPCBAz9khtKyB5BfvA5wXGH0GqagPIL9LXDscP+nouCFMt0iagPzz1jMyln9QOXDQ=="
+    }
+  ]
+}
