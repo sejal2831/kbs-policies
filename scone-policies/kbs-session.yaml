@@ -1,7 +1,16 @@
-name: kbs-policies-v2
+name: kbs-policies-v4
 version: "0.3.10"
+predecessor: $PREDECESSOR
 security:
   attestation:
     mode: none
 services:
   - name: kbs
+access_policy:
+  read:
+    - ANY
+  update:
+    - signer: |
+        -----BEGIN PUBLIC KEY-----
+        MCowBQYDK2VwAyEA1Qa0GnCN+HmHEOk0+323sXvVX+NPw4kgUFnpOlRXSH4=
+        -----END PUBLIC KEY-----

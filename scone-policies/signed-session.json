@@ -1,9 +1,9 @@
 {
-  "session": "version: 0.3.10\nname: kbs-policies-v4\npredecessor: 8b224ec2117ec5ab8bcea31f2790117a631e49d58529769371fcd91c8e2e2c1e\nservices:\n- name: kbs\n  command: null\n  pwd: null\n  persistency: None\naccess_policy:\n  read:\n  - ANY\n  update:\n  - signer: |\n      -----BEGIN PUBLIC KEY-----\n      MCowBQYDK2VwAyEA1Qa0GnCN+HmHEOk0+323sXvVX+NPw4kgUFnpOlRXSH4=\n      -----END PUBLIC KEY-----\nsecurity:\n  attestation:\n    mode: none\ncreator: null\n",
+  "session": "version: 0.3.10\nname: kbs-policies-v4\npredecessor: d591c5559fc84b73dcb539ec77557b71aff84e9ba03e2ba34bb2ffead14f555b\nservices:\n- name: kbs\n  command: null\n  pwd: null\n  persistency: None\naccess_policy:\n  read:\n  - ANY\n  update:\n  - signer: |\n      -----BEGIN PUBLIC KEY-----\n      MCowBQYDK2VwAyEA1Qa0GnCN+HmHEOk0+323sXvVX+NPw4kgUFnpOlRXSH4=\n      -----END PUBLIC KEY-----\nsecurity:\n  attestation:\n    mode: none\ncreator: null\n",
   "signatures": [
     {
       "signer": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEA1Qa0GnCN+HmHEOk0+323sXvVX+NPw4kgUFnpOlRXSH4=\n-----END PUBLIC KEY-----\n",
-      "signature": "0ObmE9/d2xXQiOJFXlAh6Lt4lRcSevFea5H1KMB/Uo0TgHmvQ8T6Nyg1wKzDCKOU2qXYrh5KE95Ra3UgQxnNAw=="
+      "signature": "EiErb9OlyJeHtspdJ6mXRKi1YdHIhqYzbQL6HCY+8WLUM5qRrktGVsRnQVBySQHOESxuxNi3+w7HYTGCY9AWBQ=="
     }
   ]
 }
