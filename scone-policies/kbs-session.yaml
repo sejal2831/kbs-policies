@@ -10,7 +10,7 @@ services:
   - name: kbs
     attestation:
       - mrenclave:
-        - 07356e51b85a86d58c8d822a9f8ca6364635388335573f3ee48fe85b5b5843af
+        - dfd6b0161e8b64342eff8bd56c53db09bc4e15c1331adc6e5da60d61db58f425
         signer:
           mrsigner: 11c4e150b76c2b145f7fadb6c30455e1046b9e6fbb75b49c6e13341ad8acc5bd
           isvprodid: 0
