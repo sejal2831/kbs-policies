@@ -1,0 +1,9 @@
+{
+  "session": "version: 0.3.10\nname: kbs-policies-v4/kbs-keys\npredecessor: 14aa65f633aba4dd522e6238e95eafae1070d4c4d7f72eaf9762b43966be99fa\nsecrets:\n- name: kbs-private-key\n  kind: private-key\n- name: kbs-cert\n  export_public: true\n  kind: x509-ca\n  private_key: kbs-private-key\n  common_name: kbs-service\naccess_policy:\n  read:\n  - ANY\n  update:\n  - ANY\nsecurity:\n  attestation:\n    mode: hardware\n    tolerate:\n    - debug-mode\n    - hyperthreading\n    - outdated-tcb\n    - software-hardening-needed\n    - insecure-configuration\n    ignore_advisories: '*'\ncreator: null\n",
+  "signatures": [
+    {
+      "signer": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEA1Qa0GnCN+HmHEOk0+323sXvVX+NPw4kgUFnpOlRXSH4=\n-----END PUBLIC KEY-----\n",
+      "signature": "6lz0LyDasQ3xqDS8SyQGGRUQpoUceWSxZCwyihuFRMI8lfzM9X3Nidd2Fo9VqUyeZZdlwZ+0YbUe56+A6sz0Dw=="
+    }
+  ]
+}
