@@ -1,0 +1,9 @@
+{
+  "session": "version: 0.3.10\nname: kbs-policies-v4\npredecessor: f085726ba2c547075ce388d0350a18a9d881d49f05fc498ad2594db257324059\nsecrets:\n- name: kbs-private-key\n  kind: private-key\n- name: kbs-cert\n  export_public: true\n  kind: x509-ca\n  private_key: kbs-private-key\n  common_name: kbs-service\nservices:\n- name: kbs\n  command: null\n  pwd: null\n  persistency: None\n  attestation:\n  - mrenclave:\n    - dfd6b0161e8b64342eff8bd56c53db09bc4e15c1331adc6e5da60d61db58f425\n    signer:\n      mrsigner: 11c4e150b76c2b145f7fadb6c30455e1046b9e6fbb75b49c6e13341ad8acc5bd\n      isvprodid: 0\naccess_policy:\n  read:\n  - ANY\n  update:\n  - signer: |\n      -----BEGIN PUBLIC KEY-----\n      MCowBQYDK2VwAyEA1Qa0GnCN+HmHEOk0+323sXvVX+NPw4kgUFnpOlRXSH4=\n      -----END PUBLIC KEY-----\nsecurity:\n  attestation:\n    mode: hardware\n    tolerate:\n    - debug-mode\n    - hyperthreading\n    - outdated-tcb\n    - software-hardening-needed\n    - insecure-configuration\n    ignore_advisories: '*'\ncreator: null\n",
+  "signatures": [
+    {
+      "signer": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEA1Qa0GnCN+HmHEOk0+323sXvVX+NPw4kgUFnpOlRXSH4=\n-----END PUBLIC KEY-----\n",
+      "signature": "pseMzXGc0i89FCTXs/sLyY5gsfd/eTFGMY8iMXsDWW8P9mwE9WOQ4ktxVF68aeHCnLSbV5Zlf3zauUUdRBiQAA=="
+    }
+  ]
+}
