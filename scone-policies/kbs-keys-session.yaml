@@ -1,6 +1,5 @@
 name: kbs-policies-v4/kbs-keys
 version: "0.3.10"
-predecessor: 14aa65f633aba4dd522e6238e95eafae1070d4c4d7f72eaf9762b43966be99fa
 
 secrets:
   - name: kbs-private-key
@@ -16,7 +15,10 @@ access_policy:
   read:
     - ANY
   update:
-    - ANY
+    - signer: |
+        -----BEGIN PUBLIC KEY-----
+        MCowBQYDK2VwAyEA1Qa0GnCN+HmHEOk0+323sXvVX+NPw4kgUFnpOlRXSH4=
+        -----END PUBLIC KEY-----
 
 security:
   attestation:
