@@ -2,26 +2,19 @@ name: kbs-policies-v4/kbs-keys
 version: "0.3.10"
 
 secrets:
-  - name: kbs-private-key
-    kind: private-key
-
-  - name: kbs-cert
-    kind: x509-ca
-    private_key: kbs-private-key
-    common_name: kbs-service
-    export_public: true
+  - name: kbs-signed-cert
+    kind: ascii
+    value: "placeholder"
 
 access_policy:
   read:
     - ANY
   update:
-    - signer: |
-        -----BEGIN PUBLIC KEY-----
-        MCowBQYDK2VwAyEA1Qa0GnCN+HmHEOk0+323sXvVX+NPw4kgUFnpOlRXSH4=
-        -----END PUBLIC KEY-----
+    - CREATOR
 
 security:
   attestation:
     mode: hardware
     tolerate: [debug-mode, hyperthreading, outdated-tcb, software-hardening-needed, insecure-configuration]
     ignore_advisories: "*"
+predecessor: 286cee4f21e9721eb0a1cceadecd2717d0cb39c80ebe1294d2ee7d4d597d68b3

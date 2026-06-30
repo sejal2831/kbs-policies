@@ -1,11 +1,16 @@
 name: kbs-policies-v4
 version: "0.3.10"
-predecessor: d591c5559fc84b73dcb539ec77557b71aff84e9ba03e2ba34bb2ffead14f555b
-security:
-  attestation:
-    mode: hardware
-    tolerate: [debug-mode, hyperthreading, outdated-tcb, software-hardening-needed, insecure-configuration]
-    ignore_advisories: "*"
+
+secrets:
+  - name: kbs-private-key
+    kind: private-key
+
+  - name: kbs-cert
+    kind: x509-ca
+    private_key: kbs-private-key
+    common_name: kbs-service
+    export_public: true
+
 services:
   - name: kbs
     attestation:
@@ -14,6 +19,7 @@ services:
         signer:
           mrsigner: 11c4e150b76c2b145f7fadb6c30455e1046b9e6fbb75b49c6e13341ad8acc5bd
           isvprodid: 0
+
 access_policy:
   read:
     - ANY
@@ -22,3 +28,10 @@ access_policy:
         -----BEGIN PUBLIC KEY-----
         MCowBQYDK2VwAyEA1Qa0GnCN+HmHEOk0+323sXvVX+NPw4kgUFnpOlRXSH4=
         -----END PUBLIC KEY-----
+
+security:
+  attestation:
+    mode: hardware
+    tolerate: [debug-mode, hyperthreading, outdated-tcb, software-hardening-needed, insecure-configuration]
+    ignore_advisories: "*"
+predecessor: f085726ba2c547075ce388d0350a18a9d881d49f05fc498ad2594db257324059
