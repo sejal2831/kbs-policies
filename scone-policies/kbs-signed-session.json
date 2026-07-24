@@ -1,9 +1,9 @@
 {
-  "session": "version: 0.3.10\nname: kbs-policies-v4\npredecessor: 7b8e87ec268a1b043cf31d0668e7dd38d63aeb9ddccff149646f9b4a97a501f3\nsecrets:\n- name: kbs-private-key\n  export:\n  - session: kbs-policies-v4/kbs-keys\n  kind: private-key\n- name: kbs-cert\n  export_public: true\n  kind: x509-ca\n  private_key: kbs-private-key\n  common_name: kbs-service\n- name: eval-test-marker\n  kind: ascii\n  size: 12\naccess_policy:\n  read:\n  - ANY\n  update:\n  - signer: |\n      -----BEGIN PUBLIC KEY-----\n      MCowBQYDK2VwAyEA1Qa0GnCN+HmHEOk0+323sXvVX+NPw4kgUFnpOlRXSH4=\n      -----END PUBLIC KEY-----\nsecurity:\n  attestation:\n    mode: hardware\n    tolerate:\n    - debug-mode\n    - hyperthreading\n    - outdated-tcb\n    - software-hardening-needed\n    - insecure-configuration\n    ignore_advisories: '*'\ncreator: null\n",
+  "session": "version: 0.3.10\nname: kbs-policies-v4\npredecessor: 8e983a6e8a67531e323f823f51a5097a526dab1df0d8d8d8f2196f07493c15b3\nsecrets:\n- name: kbs-private-key\n  export:\n  - session: kbs-policies-v4/kbs-keys\n  kind: private-key\n- name: kbs-cert\n  export_public: true\n  kind: x509-ca\n  private_key: kbs-private-key\n  common_name: kbs-service\n- name: eval-test-marker\n  kind: ascii\n  size: 12\naccess_policy:\n  read:\n  - ANY\n  update:\n  - signer: |\n      -----BEGIN PUBLIC KEY-----\n      MCowBQYDK2VwAyEA1Qa0GnCN+HmHEOk0+323sXvVX+NPw4kgUFnpOlRXSH4=\n      -----END PUBLIC KEY-----\nsecurity:\n  attestation:\n    mode: hardware\n    tolerate:\n    - debug-mode\n    - hyperthreading\n    - outdated-tcb\n    - software-hardening-needed\n    - insecure-configuration\n    ignore_advisories: '*'\ncreator: null\n",
   "signatures": [
     {
       "signer": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEA1Qa0GnCN+HmHEOk0+323sXvVX+NPw4kgUFnpOlRXSH4=\n-----END PUBLIC KEY-----\n",
-      "signature": "SMrHEMtmLnC3oVUAfX5KEbGlLHAKReIolKs8fEQfgm/Nyi+2BlFYxJjx5wbsxoXW51fkBjgVlspygC8G2BTRAA=="
+      "signature": "cP++gskb5PGY7PN6G2+uzGQYm0H2LRrvZGDdW3c/JM86G1RUeaC6Z0Sqsi6tkuKDzgHyvA0TtC069OKBLTZOBw=="
     }
   ]
 }
